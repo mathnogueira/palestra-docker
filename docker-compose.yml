@@ -7,8 +7,10 @@ services:
             dockerfile: Dockerfile
         ports:
             - "5000:3000"
-        volumes:
-            - ./dist:/usr/app/dist
+        # Não funciona no Windows =(
+        # Descomentar se você estiver no Linux ou OSX
+        # volumes:
+        #     - ./dist/:/usr/app/dist/
         networks:
             - backend
 
